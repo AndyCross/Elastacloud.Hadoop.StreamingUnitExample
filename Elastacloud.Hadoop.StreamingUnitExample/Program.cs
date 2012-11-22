@@ -16,7 +16,8 @@ namespace Elastacloud.Hadoop.StreamingUnitExample
                     "Hello, why doesn't this work!",
                     "Hello, Andy",
                     "Hello, chickenface",
-                    "Hello, Andy"
+                    "Hello, Andy",
+                    "Goodbye, Andy"
                 };
 
             var output =
@@ -26,6 +27,12 @@ namespace Elastacloud.Hadoop.StreamingUnitExample
             foreach (var mapperResult in output.MapperResult)
             {
                 Console.WriteLine(mapperResult);
+            }
+
+            Console.WriteLine("MapLog");
+            foreach (var mapperLog in output.MapperLog)
+            {
+                Console.WriteLine(mapperLog);
             }
 
             Console.WriteLine("Reduce");
